@@ -19,19 +19,25 @@
           <img src="@/assets/add.png" alt="Image" class="btn-icon-image" />
           New Card
         </q-btn>
+        <AddCardComponent ref="addCardComponent" />
       </div>
     </div>
   </q-page-container>
 </template>
 
 <script>
+import AddCardComponent from './AddCardComponent.vue';
+
 export default {
   name: "HeaderComponent",
+  components: {
+    AddCardComponent
+  },
   methods: {
     openDialog() {
-      // Add logic to open the dialog here
+      this.$refs.addCardComponent.openDialog(); // Open the dialog
     },
-  },
+  }
 }
 </script>
 
@@ -45,18 +51,24 @@ export default {
   align-items: center;
   justify-content: center;
   font-family: sans-serif;
-  color: #FFFFFF; /* Text color */
-  font-size: 12px; /* Text font size */
-}
-.text {
-  font-family: sans-serif;
-  font-size: 16px; /* Text font size */
   color: #FFFFFF;
-}
-.btn-icon-image {
-  width: 16px; /* Adjust the width as needed */
-  height: 16px; /* Adjust the height as needed */
-  margin-right: 1rem;
+  /* Text color */
+  font-size: 12px;
+  /* Text font size */
 }
 
+.text {
+  font-family: sans-serif;
+  font-size: 16px;
+  /* Text font size */
+  color: #FFFFFF;
+}
+
+.btn-icon-image {
+  width: 16px;
+  /* Adjust the width as needed */
+  height: 16px;
+  /* Adjust the height as needed */
+  margin-right: 1rem;
+}
 </style>

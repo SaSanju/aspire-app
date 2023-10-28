@@ -19,7 +19,7 @@
       </q-toolbar>
     </q-header>
     <div class="q-pa-md">
-      <img src="@/assets/logo.png" alt="Image" class="top-right-image" />
+      <img src="@/assets/ColorLogo.png" alt="Image" class="top-right-image" />
     </div>
 
     <q-drawer
